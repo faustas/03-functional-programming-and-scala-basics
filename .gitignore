@@ -2,6 +2,11 @@
 .bloop/
 ### Metals
 .metals/
+### IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
 ### Scala / SBT
 dist/*
 target/
