@@ -57,5 +57,23 @@ object Main {
     val f1: (String, String) => Int = (a: String, b: String) =>  a.length + b.length
     println(f1("foo", "bar")) // 6
 
+    /**
+     * Simple polymorphic function that dropped one element from
+     * the provided list of elements.
+     * The type of the list is not defined yet.
+     *
+     * @param list  List of type A.
+     * @tparam A    Type of the list.
+     * @return List with one less element of type A.
+     */
+    def dropOne[A](list: List[A]): List[A] = {
+      list.drop(1)
+    }
+
+    val droppedString = dropOne[String](List[String]("1", "2", "3"))
+    println(droppedString) // List("2", "3")
+    val droppedInt = dropOne[Int](List[Int](1, 2, 3))
+    println(droppedInt)    // List(2, 3)
+
   }
 }
