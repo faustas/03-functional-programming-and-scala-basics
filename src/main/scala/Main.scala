@@ -20,10 +20,10 @@ object Main {
     // the variable can not be re-assigned, but the data structure can be changed
     val immutableMutableMap: scala.collection.mutable.Map[Int, String] =
       scala.collection.mutable.Map(1 -> "foo", 2 -> "bar", 3 -> "foobar")
-    val changedImmutableMuableMap: scala.collection.mutable.Map[Int, String] =
+    val changedImmutableMutableMap: scala.collection.mutable.Map[Int, String] =
       immutableMutableMap.addOne((4, "pi"))
     println(immutableMutableMap)        // both will be identical
-    println(changedImmutableMuableMap)
+    println(changedImmutableMutableMap)
 
     // JUST DON'T do that !!!
     var mutableSeq: scala.collection.mutable.Seq[String] =
